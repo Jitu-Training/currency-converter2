@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import "./App.css"
 
 const App = () => {
   const [countries, setCountries] = useState(['USD', 'EUR', 'JPY', 'GBP', 'CAD', 'AUD', 'CHF', 'CNY', 'SEK', 'NZD']);
@@ -51,7 +52,9 @@ const App = () => {
   }, [fromCurrency, toCurrency, amount]);
 
   return (
-    <form className="currency-form">
+
+    <div className="body">
+      <form className="currency-form">
       <h1>Currency Exchange App</h1>
       <div className="form-group">
         <label htmlFor="fromCurrency">From:</label>
@@ -85,6 +88,10 @@ const App = () => {
         </p>
       )}
     </form>
+
+
+    </div>
+    
   );
 };
 
